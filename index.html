@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Mega</title>
+
+    
+     <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="game.css">
+
+    <script src="jsquery.js"></script>
+    <script src="Chart.js"></script>
+    <script src="game.js"></script>
+
+</head>
+<body>
+    
+    <div id="nav-topo" class="row navbar navbar-expand-sm">
+        <div class="col-sm-12">
+            <h3 class="text text-light">Simulador de Sorteios Para Jogos</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <fieldset class="borda">
+                    <legend>Dados</legend>
+                    <div class="row">
+                        <div class="col-sm-2 form-group">
+                            <label>Tipos Padrões</label>
+                            <select id="sct-tipo" class="form-control form-control-sm">
+                                <option value="">Selecione...</option>
+                                <option value="1">Mega Sena</option>
+                                <option value="2">Loto Fácil</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2 form-group">
+                            <label>Valor Mínimo:</label>
+                            <input type="text" id="cp-valor-min" class="form-control form-control-sm">
+                        </div>
+                        <div class="col-sm-2 form-group">
+                            <label>Valor Máximo:</label>
+                            <input type="text" id="cp-valor-max" class="form-control form-control-sm">
+                        </div>
+                        <div class="col-sm-2 form-group">
+                            <label>Qtde Chances</label>
+                            <input type="text" id="cp-qtde-apostas" class="form-control form-control-sm">
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <label>Seus Números:</label>
+                            <input  id="cp-aposta" type="text" class="form-control form-control-sm" placeholder="Digite e pressione Enter">    
+                        </div>
+                    </div>
+                
+                </fieldset>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="borda">
+                            <table id="numeros" class="table table-sm table-bordered">
+                                <thead>
+                                    <tr>
+                                        <td id="td-head" colspan="1">
+                                            <center>
+                                                Resultados
+                                            </center>
+                                        </td>
+                                    </tr>
+                                    <tr id="tr-posicoes">
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="tr-apostados">
+                                        
+                                    </tr>
+                                    <tr id="tr-sorteados">
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="borda">
+                            <div id="container-grafico">
+                                <canvas id="graf">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="row">
+                    
+                    <div class="col-sm-7">
+                        <div class="borda">
+                            <table id="tb-hanking" class="table table-sm table-bordered">
+                                <thead>
+                                    <tr>
+                                        <td colspan="3">Números Mais Sorteados</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Posição</td>
+                                        <td>Número</td>
+                                        <td>Ocorrencias</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-hanking">
+            
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5">
+                        <div class="btn-group d-flex justify-content-end">
+                            <button id="bt-auto" class="btn btn-secondary btn-sm">Iniciar Hankeamento</button><br>
+                            <button id="bt-pausa" class="btn btn-secondary btn-sm">Parar</button><br>
+                            <button id="bt-reset" class="btn btn-secondary btn-sm">Reset Rapido</button><br>
+                            <button id="bt-manopla" class="btn btn-secondary btn-sm">Reset Com Efeito</button><br>
+                        </div>
+                        
+                        <br>
+
+                        <center><h5 id="numerosFinais" class="text text-primary"></h5></center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

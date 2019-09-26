@@ -1,0 +1,17 @@
+#nav-topo{
+    background-color: #E6E6E6;
+    background-color: #2E2EFE;
+    border: 1px solid #D8D8D8;
+    height: 40px;
+    color: #f1f1f1;
+}
+#nav-topo a{
+    text-align: right;
+    color: #696969;
+}
+
+.borda{
+    border: 1px solid #dddddd;
+    padding: 3px;
+    margin: 3px;
+}
